@@ -1,0 +1,78 @@
+/*
+Error: Undefined mixin 'media-query'.
+        on line 29 of /home/ubuntu/workspace/site/styles/components/_modules/_page-header.scss, in `media-query'
+        from line 29 of /home/ubuntu/workspace/site/styles/components/_modules/_page-header.scss
+
+24: @each $mq-name, $spt-url in
+25:   (smallest, "images/xs/"),
+26:   (small, "images/s/"),
+27:   (large, "images/l/"),
+28:   (largest, "images/xl/") {
+29:   @include media-query($mq-name) {
+30:     .main-header-h1 {
+31:       height: newSize(414px);
+32:     }
+33:     .hero {
+34:       //top: newSize(475px);
+
+Backtrace:
+/home/ubuntu/workspace/site/styles/components/_modules/_page-header.scss:29:in `media-query'
+/home/ubuntu/workspace/site/styles/components/_modules/_page-header.scss:29
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:98:in `with_mixin'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:240:in `block (3 levels) in visit_each'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:240:in `map'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:240:in `block (2 levels) in visit_each'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:232:in `map'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:232:in `block in visit_each'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:231:in `visit_each'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin.rb:82:in `update_stylesheets'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:361:in `watch_or_update'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/bin/scss:13:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/scss:23:in `load'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/scss:23:in `<main>'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'media-query'.\A         on line 29 of /home/ubuntu/workspace/site/styles/components/_modules/_page-header.scss, in `media-query'\A         from line 29 of /home/ubuntu/workspace/site/styles/components/_modules/_page-header.scss\A \A 24: @each $mq-name, $spt-url in\A 25:   (smallest, \"images/xs/\"),\A 26:   (small, \"images/s/\"),\A 27:   (large, \"images/l/\"),\A 28:   (largest, \"images/xl/\") {\A 29:   @include media-query($mq-name) {\A 30:     .main-header-h1 {\A 31:       height: newSize(414px);\A 32:     }\A 33:     .hero {\A 34:       //top: newSize(475px);"; }

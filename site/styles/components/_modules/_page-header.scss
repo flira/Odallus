@@ -1,0 +1,37 @@
+.main-header {
+  @extend %fixed;
+  @extend %text-center;
+  background-image: linear-gradient(to bottom , #444, #000);
+  width: 100%;
+  padding: 100px 0;
+  &-h1 {
+    @extend %hidden-text;
+    @extend %sprite;
+    margin: auto;
+    width: 66%;
+    height: 20%;
+  }
+}
+
+.hero {
+  @extend %absolute;
+  @extend %sprite;
+  width: 100%;
+  height: 130%;
+  top: 75%;
+}
+
+@each $mq-name, $spt-url in
+  (smallest, "images/xs/"),
+  (small, "images/s/"),
+  (large, "images/l/"),
+  (largest, "images/xl/") {
+  @include media-query($mq-name) {
+    .main-header-h1 {
+      height: newSize(414px);
+    }
+    .hero {
+      //top: newSize(475px);
+    }
+  }
+}

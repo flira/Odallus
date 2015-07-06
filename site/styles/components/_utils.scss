@@ -1,0 +1,91 @@
+// Utils
+
+//==========  VARIABLES  ==========
+$colorText: #6d6e71;
+$colorHeaderMenu: #000;
+$colorHeaderMenuSelected: #fff;
+$colorLogo: #ec008c;
+
+$fontDefault: georgia, serif;
+
+$fontSizeBase: 16;
+$bodyBackgroundColor: #000;
+$light-gray: #dcddde;
+
+$size: 1366px;
+
+$largest: 2559px;
+$large: 1980px;
+$medium: $size;
+$small: 800px;
+$smallest: 420px;
+$externalMargin: 20px;
+
+//==========  FUNCTIONS  ==========
+
+@function toEm($n, $m: $fontSizeBase) {
+  @return ($n/$m)+em;
+}
+
+@function newSize($newSize) {
+  @return round(($size/$medium)*$newSize);
+}
+
+@function newPosition($newX, $newY) {
+  @return newSize($newX) newSize($newY);
+}
+
+//==========  MIXINS  ==========
+
+  // Font import
+  @mixin font-face($name, $weight, $style, $suffix: '') {
+        font-family: $name;
+        src: url('../fonts/' + $name + $suffix + '.eot');
+        src: url('../fonts/' + $name + $suffix + '.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/' + $name + $suffix + '.woff2') format('woff2'),
+        url('../fonts/' + $name + $suffix + '.woff') format('woff'),
+        url('../fonts/' + $name + $suffix + '.ttf') format('truetype'),
+        url('../fonts/' + $name + $suffix + '.svg#asapitalic') format('svg');
+        font-weight: $weight;
+        font-style: $style;
+  }
+
+  // Media Query
+  @mixin media-query($media-query) {
+    @if $media-query == smallest {
+      $size: $smallest !global;
+      @media only screen and (max-width: $smallest) { @content; }
+    }
+    @if $media-query == small {
+      $size: $small !global;
+      @media only screen and (max-width: $small) { @content; }
+    }
+    @if $media-query == large {
+      $size: $large !global;
+      @media only screen and (max-width: $large) { @content; }
+    }
+    @if $media-query == largest {
+      $size: $largest !global;
+      @media only screen and (min-width: $largest) { @content; }
+    }
+  }
+
+  // Just some helpers...
+  @mixin smallest { @include media-query(smallest) { @content }; }
+  @mixin small { @include media-query(small) { @content }; }
+  @mixin medium { @include media-query(medium) { @content }; }
+  @mixin large { @include media-query(large) { @content }; }
+  @mixin largest { @include media-query(largest) { @content }; }
+
+  // Grid CSS rules
+  @mixin rule--col($mediaQuery) {
+    @if $mediaQuery == medium {
+      float: left;
+      margin-right: $mediumGutterWidth;
+    }
+
+    @if $mediaQuery == wide {
+      float: left;
+      margin-right: $wideGutterWidth;
+    }
+  }

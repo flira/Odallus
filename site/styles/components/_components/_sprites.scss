@@ -1,0 +1,30 @@
+@mixin all-states {
+  &:hover, &:focus, & .selected {
+    @content;
+  }
+}
+%sprite {
+  background-repeat: no-repeat;
+}
+.main-header-h1 {
+  background-image: url(images/logo.png);
+  background-size: contain;
+}
+.hero {
+  background-image: url(images/hero.png);
+  background-size: cover;
+}
+@each $mq-name, $spt-url in
+  (smallest, "images/xs/"),
+  (small, "images/s/"),
+  (large, "images/l/"),
+  (largest, "images/xl/") {
+  @include media-query($mq-name) {
+    .main-header-h1 {
+      background-image: url(#{$spt-url}/logo.png);
+    }  
+    .hero {
+      background-image: url(#{$spt-url}/hero.png);
+    }
+  }
+}
